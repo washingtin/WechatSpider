@@ -7,12 +7,12 @@
 # 启动项目
 ```
 // 克隆项目到本地
-git clone https://gitee.com/poet/WechatSpider.git
+https://github.com/washingtin/WechatSpider.git
 
 // 修改`WechatSpider/src/main/resources/application.properties`对的数据库地址
 vim ~/WechatSpider/src/main/resources/application.properties
 
-// 修改完成后打包
+// 修改完成后打包 
 cd ~/WechatSpider && mvn clean install -Dmaven.test.skip=true
 
 // 安装`AnyProxy`
