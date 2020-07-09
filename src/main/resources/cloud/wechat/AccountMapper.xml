@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seven.wechat.cloud.AccountMapper">
+
+ <!--<insert id="replaceInsert">-->
+    <!--REPLACE INTO account (id, biz, nickname, headimg, crawl_time)-->
+    <!--VALUES (#{bean.id}, #{bean.biz}, #{bean.nickname}, #{bean.headimg}, #{bean.crawlTime})-->
+<!--</insert>-->
+
+    <insert id="replaceInsert">
+        REPLACE INTO account (id, biz, nickname, headimg, crawl_time)
+        VALUES (
+        #{bean.id, jdbcType=NUMERIC},
+        #{bean.biz, jdbcType=VARCHAR},
+        #{bean.nickname, jdbcType=VARCHAR},
+        #{bean.headimg, jdbcType=VARCHAR},
+        #{bean.crawlTime, jdbcType=NUMERIC})
+    </insert>
+
+</mapper>

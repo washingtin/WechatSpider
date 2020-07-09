@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seven.wechat.cloud.CommentMapper">
+
+    <insert id="replaceInsert">
+        REPLACE INTO comment (
+        id,biz,mid,content_id,nick_name,logo_url,content,create_time,like_num)
+        VALUES (
+        #{bean.id, jdbcType=NUMERIC},
+        #{bean.biz, jdbcType=VARCHAR},
+        #{bean.mid, jdbcType=NUMERIC},
+        #{bean.contentId, jdbcType=NUMERIC},
+        #{bean.nickName, jdbcType=VARCHAR},
+        #{bean.logoUrl, jdbcType=VARCHAR},
+        #{bean.content, jdbcType=VARCHAR},
+        #{bean.createTime, jdbcType=NUMERIC},
+        #{bean.likeNum, jdbcType=NUMERIC}
+        )
+    </insert>
+
+</mapper>
