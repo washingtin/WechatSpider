@@ -1,3 +1,6 @@
+#说明
+    此代码来自互联网，我只是在上面升级springboot版本，解决一些入库bug. 添加导出word,txt功能
+
 # WechatSpider
 抓取微信公众号全部文章，采用AnyProxy+JS+Java实现
 
