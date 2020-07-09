@@ -66,13 +66,13 @@ CREATE TABLE `comment` (
   `biz` varchar(50) DEFAULT NULL COMMENT '公众号唯一标识',
   `mid` bigint(20) DEFAULT NULL COMMENT '文章的mid',
   `content_id` varchar(50) DEFAULT NULL COMMENT '评论ID',
-  `nick_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '昵称',
+  `nick_name` varchar(200)  DEFAULT NULL COMMENT '昵称',
   `logo_url` varchar(200) DEFAULT NULL COMMENT '头像',
-  `content` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '评论内容',
+  `content` varchar(2000)  DEFAULT NULL COMMENT '评论内容',
   `create_time` int(11) DEFAULT NULL COMMENT '创建时间',
   `like_num` int(11) DEFAULT NULL COMMENT '点赞量',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_biz_mid_cid` (`biz`,`mid`,`content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='评论';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='评论';
 
 SET FOREIGN_KEY_CHECKS = 1;
